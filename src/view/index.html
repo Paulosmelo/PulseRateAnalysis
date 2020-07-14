@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+  <script type="text/javascript" src="/home/lluaki/Documents/projects/PulseRateAnalysis/assets/Persons.json"></script>
+  <script src="/home/lluaki/Documents/projects/PulseRateAnalysis/src/view/node_modules/chart.js/dist/Chart.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/home/lluaki/Documents/projects/PulseRateAnalysis/src/view/node_modules/chart.js/dist/Chart.min.css">
+</head>
+
+<body>
+  <canvas id="myChart"></canvas>
+</body>
+
+<script>
+  var ctx = document.getElementById('myChart').getContext("2d");
+
+  var myBubbleChart = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      datasets: [{
+          data: [{x : 10, y : 10, r: 40}, {x : 9, y : 7, r: 40}, {x : 2, y : 13, r: 40}, {x : 7 , y : 3, r: 40}],
+          backgroundColor: ["yellow", "Blue", "Green", "Black"]
+      }]
+  },
+  options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true,
+                max: 20
+            },
+            scaleLabel: "Rest"
+        }],
+        xAxes: [{
+          ticks: {
+              beginAtZero: true,
+              max: 20
+          }
+      }]
+    }
+  }
+});
+</script>
