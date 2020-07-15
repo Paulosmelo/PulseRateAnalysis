@@ -14,8 +14,7 @@ cur.execute(''' CREATE TABLE Person (
   sex BOOLEAN,
   exercise INTEGER,
   height INTEGER,
-  weight INTEGER,
-  variation FLOAT
+  weight INTEGER
   )  ''')
 
 fh = open("/home/lluaki/Documents/projects/PulseRateAnalysis/assets/Pulse.csv")
@@ -30,12 +29,11 @@ for line in fh:
   
   line = map(lambda x: int(x) if not(x.startswith('"')) else x, line)
   line = list(line)
-  variation = (line[1] - line[2])/line[2]*100
   _id = re.findall("\d+", line[0])
   
   cur.execute(''' 
-      INSERT INTO Person (id, active, rest, smoke, sex, exercise, height, weight, variation)
-      VALUES (?,?,?,?,?,?,?,?,?)           
-  ''', (int(_id[0]), line[1], line[2], line[3], line[4], line[5], line[6], line[7], variation))
+      INSERT INTO Person (id, active, rest, smoke, sex, exercise, height, weight)
+      VALUES (?,?,?,?,?,?,?,?)           
+  ''', (int(_id[0]), line[1], line[2], line[3], line[4], line[5], round((line[6]*2.54)/100, 2), round(line[7]/2.205)))
   conn.commit()
 cur.close()
