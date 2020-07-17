@@ -26,8 +26,8 @@ def getColor(imc, sex):
 
   
 for item in persons:
-  variation = round((item[1]-item[2])/item[2]*100)
-  imc = round(item[7]/(item[6]*item[6]))
+  variation = (item[1]-item[2])/item[2]*100
+  imc = item[7]/(item[6]*item[6])
   obj = {
       col[0] : item[0],
       col[1] : item[1],
