@@ -18,7 +18,7 @@
     data: {
       datasets: [{
           data: data['Bubbles'],
-          wborderColor: data['Borders'],
+          borderColor: data['Borders'],
           backgroundColor: data['Colors']
       }]
   },
@@ -27,18 +27,35 @@
         yAxes: [{
             ticks: {
                 beginAtZero: true,
-                max: 4,
-                min: 0
-            }
-           
+                max: 90,
+                min: -15
+            },
+           scaleLabel: {
+             display: true,
+             labelString: "Variation(bpm)"
+           }
         }],
         xAxes: [{
           ticks: {
-              min: 15,
+              min: 17,
               max: 36
+          },
+          scaleLabel: {
+            display: true,
+            labelString: "IMC"
           }
       }]
-    }
+    },
+    legend: {
+        display: true,
+        position: 'bottom',
+       
+    },
+    title: {
+      display: true,
+      text: 'Pulse rate after execise',
+      fontSize: 20
   }
+}
 });
 </script>

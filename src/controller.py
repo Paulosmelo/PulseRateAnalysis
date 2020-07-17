@@ -15,18 +15,23 @@ personsJs["Borders"] = []
 personsJs["Colors"] = []
 
 getBorder = lambda smoke: 'Black' if(smoke)  else 'White'
-maxImc = lambda imc: 60 if(imc >= 60)  else imc
 
-def getColor(imc, sex):
-  perc = maxImc(imc)/60
-  if sex:
-    return ( 50-(50*perc), 50-(50*perc), 250-(100*perc))
+
+def getColor(v):
+  color = ()
+  if v >=66:
+    color = ('250', '0', '0')
+  elif v >= 33:
+    color = ('0', '250', '0')
+  elif v > 0:
+    color = ('0', '0', '250')
   else:
-    return (250-(100*perc), 50-(50*perc), 50-(50*perc))
+    color = ('250', '250', '0')
+  return 'rgb('+color[0]+ ','+color[1]+','+color[2]+', 0.7)'
 
   
 for item in persons:
-  variation = (item[1]-item[2])/item[2]*100
+  variation = item[1]-item[2]
   imc = item[7]/(item[6]*item[6])
   obj = {
       col[0] : item[0],
@@ -42,17 +47,18 @@ for item in persons:
   }
   bb = {
         'x': imc,
-        'y': item[5],
-        'r': round(variation)/2      
+        'y': variation,
+        'r': 10    
   }
-  border = getBorder(item[3])
-  color = getColor(imc, item[4])
   
+  border = getBorder(item[3])
+  color = getColor(variation/item[2]*100)
 
   personsJs["Borders"].append(border)
   personsJs["PersonData"].append(obj)
   personsJs["Bubbles"].append(bb)
-  personsJs["Colors"].append('rgb('+ str(color[0])+ ','+ str(color[1])+','+str(color[2])+', 0.4)')
+
+  personsJs["Colors"].append(color)
 
 file = "/home/lluaki/Documents/projects/PulseRateAnalysis/assets/Persons.js"
 if path.exists(file):
