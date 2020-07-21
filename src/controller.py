@@ -48,7 +48,7 @@ for item in persons:
   bb = {
         'x': imc,
         'y': variation,
-        'r': 10    
+        'r': 5    
   }
   
   border = getBorder(item[3])
