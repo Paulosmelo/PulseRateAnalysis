@@ -8,17 +8,19 @@ https://vincentarelbundock.github.io/Rdatasets/doc/Stat2Data/Pulse.html
 # Data:
 It is going to be use python to reads the data and insert it in a sqlite database. The python file is going to fill the data base and after that another python file is gonna read it and creates js file with objects.
 
-# Data visualisation:
+# Data visualization:
 It going to be use a js library (chart.js) to get the js file and create a bubble chart.
 
 
 # Required:
-Python and Sqlite.
+Python 3 and Sqlite.
 
 # Tutorial:
 
-Step 1: Run "model.py" to create a database and insert date into it.
+Step 1: Download the code and unzip it.
 
-Step 2: Run "controller.py" to create a js file with the objects.
+Step 2: Run file "src/model.py" to create a database and insert date into it.
 
-Step 3: Open index.html in you browser .
+Step 3: Run file "src/controller.py" to create a js file with the objects.
+
+Step 4: Open "view/index.html"  in you browser .
