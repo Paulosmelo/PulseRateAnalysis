@@ -2,7 +2,7 @@ import sqlite3
 import re
 
 #Creating database
-conn = sqlite3.connect('/home/lluaki/Documents/projects/PulseRateAnalysis/database/PulseRateDB.sqlite')
+conn = sqlite3.connect('/home/lluaki/Documents/Projects/PulseRateAnalysis/database/PulseRateDB.sqlite')
 cur = conn.cursor()
 
 cur.execute("DROP TABLE IF EXISTS Person")

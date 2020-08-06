@@ -2,7 +2,7 @@ import sqlite3, json
 import os.path
 from os import path
 
-conn = sqlite3.connect('/home/lluaki/Documents/projects/PulseRateAnalysis/database/PulseRateDB.sqlite')
+conn = sqlite3.connect('/home/lluaki/Documents/Projects/PulseRateAnalysis/database/PulseRateDB.sqlite')
 cur = conn.cursor()
 
 cur.execute(' SELECT * FROM Person')
@@ -47,8 +47,8 @@ for item in persons:
   }
   bb = {
         'x': imc,
-        'y': variation,
-        'r': 5    
+        'y':item[5],
+        'r': variation/2.5  
   }
   
   border = getBorder(item[3])
@@ -60,7 +60,7 @@ for item in persons:
 
   personsJs["Colors"].append(color)
 
-file = "/home/lluaki/Documents/projects/PulseRateAnalysis/assets/Persons.js"
+file = "/home/lluaki/Documents/Projects/PulseRateAnalysis/assets/Persons.js"
 if path.exists(file):
   os.remove(file)
   

@@ -13,8 +13,8 @@ body{
 
 #container{
   position: absolute;
-  height: 50%;
-  width: 60%;
+  height: 60%;
+  width: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -35,16 +35,37 @@ body{
   background-color: pink;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  
 }
 #info-title{
+  display: flex;
   height: 10%;
   width: 100%;
   background-color: black;
   border-top-right-radius: 10px;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+#info-title h1{
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
 }
 
 #info-text{
-  height: 90%;
-  width: 100%;
+  height: 80%;
+  width: 94%;
   border-bottom-right-radius: 10px;
+  padding: 3%;
+}
+
+#info-text p{
+  color: #000;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+  
 }

@@ -5,6 +5,8 @@
   <script src="/home/lluaki/Documents/Projects/PulseRateAnalysis/src/view/node_modules/chart.js/dist/Chart.min.js"></script>
   <link href="index.css"  rel="stylesheet" type="text/css"> 
   <link rel="stylesheet" type="text/css" href="/home/lluaki/Documents/Projects/PulseRateAnalysis/src/view/node_modules/chart.js/dist/Chart.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,11 +15,13 @@
       <canvas id="myChart"></canvas>
     </div>
     <div id="info-container">
-      <header id="info-title">
-
-      </header>
+      <div id="info-title">
+        <h1>Pulse Rate after exercise</h1>
+      </div>
       <div id="info-text">
-
+        <p>
+            <b>Resume:</b>This chart shows pulse rate from a analisys of 232 persons before and after some exercise. In this chart you can see the variation of pulse rate of each person represented by a bubble. The variation is as big as the bubble and a bubble with black border is of smoker one.<br>            
+        </p>
       </div>
     </div>
   </div>
@@ -33,11 +37,10 @@
           data: data['Bubbles'],
           borderColor: data['Borders'],
           backgroundColor: data['Colors'],
-          label: "red"
+          label: "Under 33%"
       }, 
-      {label: "green", backgroundColor: "green"},
-      {label: "red", backgroundColor: "red"},
-      {label: "yellow", backgroundColor: "yellow"}
+      {label: "Over 66%", backgroundColor: "red"},
+      {label: "Under 66% and Over 33%", backgroundColor: "green"}
       ]
   },
   options: {
@@ -45,12 +48,12 @@
         yAxes: [{
             ticks: {
                 beginAtZero: true,
-                max: 90,
-                min: -15
+                max: 4,
+                min: 0
             },
            scaleLabel: {
              display: true,
-             labelString: "Variation(bpm)"
+             labelString: "Exercise per week"
            }
         }],
         xAxes: [{
