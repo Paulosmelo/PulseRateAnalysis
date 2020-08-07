@@ -7,10 +7,10 @@ I get the data from a list of data sources made to help students who are learnin
 https://vincentarelbundock.github.io/Rdatasets/doc/Stat2Data/Pulse.html  
 
 # Data Retrieving
-It is going to be use python to reads the data and insert it in a SQLite database. The python file is going to fill the database and after that, another python file is gonna read it and creates a js file with objects.
+It is going to use python to read data and insert it in a SQLite database. The python file is going to fill the database and after that, another python file is gonna read it and to create a js file with objects.
 
 # Data visualization
-It going to use a js library (chart.js) to get the js file and create a bubble chart.
+It going to use a js library (chart.js) to get objects and create a bubble chart.
 
 # Required
 Python 3 and SQLite.
