@@ -11,7 +11,7 @@ It is going to be use python to reads the data and insert it in a SQLite databas
 It going to use a js library (chart.js) to get the js file and create a bubble chart.
 
 # Required
-Python 3 and Sqlite.
+Python 3 and SQLite.
 
 # Tutorial
 Step 1: Download the code and unzip it.  
