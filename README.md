@@ -3,7 +3,6 @@ This project was created to help me to learn how to use python and javascript fo
 
 # Data
 I get the data from a list of data sources made to help students who are learning about data science. If you want to know about it, follow the link below. 
-
 https://vincentarelbundock.github.io/Rdatasets/doc/Stat2Data/Pulse.html  
 
 # Data Retrieving
