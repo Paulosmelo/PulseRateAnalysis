@@ -1,5 +1,5 @@
 # Resume
-This project was created to help me to learn how to use python and javascript for data visualization. It is a web page that shows data from analysis about pulse rates and exercises.  
+This project was created to help me to learn how to use python and javascript for data visualization. It is a web page to display data from analysis about pulse rates and exercises.  
 
 # Data
 I get the data from a list of data sources made to help students who are learning about data science. If you want to know about it, follow the link below. 
