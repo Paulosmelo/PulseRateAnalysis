@@ -17,6 +17,7 @@ Python 3 and SQLite.
 
 # Tutorial
 Step 1: Download the code and unzip it.  
-Step 2: Run file "src/model.py" to create a database and insert data into it.  
-Step 3: Run file "src/controller.py" to create a js file with the objects.  
-Step 4: Open "view/index.html" in your browser.
+Step 2: edit files path to your machine paths.
+Step 3: Run file "src/model.py" to create a database and insert data into it.  
+Step 4: Run file "src/controller.py" to create a js file with the objects.  
+Step 5: Open "view/index.html" in your browser.
